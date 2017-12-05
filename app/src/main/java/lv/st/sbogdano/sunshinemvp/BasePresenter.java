@@ -6,4 +6,6 @@ package lv.st.sbogdano.sunshinemvp;
 
 public interface BasePresenter {
 
+  void start();
+
 }

@@ -6,9 +6,13 @@ import lv.st.sbogdano.sunshinemvp.R;
 
 public class WeatherActivity extends AppCompatActivity {
 
+  private WeatherPresenter mWeatherPresenter;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_weather);
+
+
   }
 }
