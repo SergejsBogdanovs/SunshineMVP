@@ -10,9 +10,11 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import lv.st.sbogdano.sunshinemvp.R;
+import lv.st.sbogdano.sunshinemvp.util.ActivityUtil;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -44,6 +46,17 @@ public class WeatherActivity extends AppCompatActivity {
     if (mNavView != null) {
       setupDrawerContent(mNavView);
     }
+
+    WeatherFragment weatherFragment =
+        (WeatherFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+    if (weatherFragment == null) {
+      // Create the fragment.
+      weatherFragment = WeatherFragment.newInstance();
+      ActivityUtil.addFragmentToActivity(
+          getSupportFragmentManager(),
+          weatherFragment,
+          R.id.contentFrame);
+    }
   }
 
   @Override
@@ -61,12 +74,15 @@ public class WeatherActivity extends AppCompatActivity {
       switch (item.getItemId()) {
         case R.id.settings:
           //TODO launch settings activity
+          Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
           break;
-        case R.id.item_celsius:
+        case R.id.item_metric:
           //TODO implement Celsius
+          Toast.makeText(this, "Celsius", Toast.LENGTH_SHORT).show();
           break;
-        case R.id.item_kelvin:
+        case R.id.item_imperial:
           // TODO implement Kelvin
+          Toast.makeText(this, "Kelvin", Toast.LENGTH_SHORT).show();
         default:
           break;
       }

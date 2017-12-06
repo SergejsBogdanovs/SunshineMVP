@@ -7,12 +7,12 @@
   <item android:title="@string/pref_units_label">
     <menu>
       <item
-        android:id="@+id/item_celsius"
+        android:id="@+id/item_metric"
         android:title="@string/pref_units_label_metric"
         android:icon="@drawable/temperature_celsius"/>
 
       <item
-        android:id="@+id/item_kelvin"
+        android:id="@+id/item_imperial"
         android:title="@string/pref_units_label_imperial"
         android:icon="@drawable/temperature_kelvin"/>
     </menu>
