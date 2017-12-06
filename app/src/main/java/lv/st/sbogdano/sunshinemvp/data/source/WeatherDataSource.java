@@ -1,9 +1,36 @@
 package lv.st.sbogdano.sunshinemvp.data.source;
 
-/**
- * Created by sbogdano on 05/12/2017.
- */
 
-public class WeatherDataSource {
+import android.support.annotation.NonNull;
+import java.util.List;
+import lv.st.sbogdano.sunshinemvp.data1.Result;
+
+/**
+ * Main entry point to access weather data.
+ * <p>
+ * For simplicity, only getWeather() and getWeatherDetails() have callbacks. Consider adding callbacks to other
+ * methods to inform the user of network/database errors or successful operations.
+ */
+public interface WeatherDataSource {
+
+  interface LoadWeatherCallback {
+
+    void onWeatherLoaded(List<Result> result);
+
+    void onDataNotAvailable();
+  }
+
+  interface GetWeatherDetailsCallback {
+
+    void onWeatherDeatilsLoaded(Result resultDetails);
+
+    void onDataNotAvailable();
+  }
+
+  void getWeather(@NonNull LoadWeatherCallback callback);
+
+  void getWeatherDetails(@NonNull String weatherId, @NonNull GetWeatherDetailsCallback callback);
+
+  void refreshWeather();
 
 }

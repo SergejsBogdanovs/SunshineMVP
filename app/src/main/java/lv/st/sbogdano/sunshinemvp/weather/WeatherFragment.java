@@ -3,7 +3,6 @@ package lv.st.sbogdano.sunshinemvp.weather;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import java.util.List;
-import lv.st.sbogdano.sunshinemvp.data.Weather;
 import lv.st.sbogdano.sunshinemvp.weather.WeatherContract.Presenter;
 
 /**
@@ -30,7 +29,7 @@ public class WeatherFragment extends Fragment implements WeatherContract.View{
   }
 
   @Override
-  public void showWeather(List<Weather> weatherList) {
+  public void showWeather(List<Result> resultList) {
 
   }
 

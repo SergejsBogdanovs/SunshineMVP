@@ -4,7 +4,6 @@ import android.support.annotation.NonNull;
 import java.util.List;
 import lv.st.sbogdano.sunshinemvp.BasePresenter;
 import lv.st.sbogdano.sunshinemvp.BaseView;
-import lv.st.sbogdano.sunshinemvp.data.Weather;
 
 /**
  * This specifies contract between View and Presenter.
@@ -15,7 +14,7 @@ public interface WeatherContract {
 
     void setLoadingIndicator(boolean active);
 
-    void showWeather(List<Weather> weatherList);
+    void showWeather(List<Result> resultList);
 
     void showWeatherDetails(String weatherId);
 
@@ -29,7 +28,7 @@ public interface WeatherContract {
 
     void loadWeather(boolean forceUpdate);
 
-    void openWeatherDetails(@NonNull Weather requestedWeather);
+    void openWeatherDetails(@NonNull Result requestedResult);
 
   }
 }

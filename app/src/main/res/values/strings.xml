@@ -34,7 +34,7 @@
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     - Used in Action Bar and in AndroidManifest to tell the device the name of this app. It's  -
-    - good practice to keep this short, so if your app's name was "The Greatest Weather App    -
+    - good practice to keep this short, so if your app's name was "The GreatResultther App    -
     - In the History of Mankind", your launcher icon isn't displayed with "The greatest Wea"   -
     - or something similar.                                                                    -
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -46,13 +46,13 @@
     - shorter is better.                                                                       -
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <string name="action_map">Map Location</string>
-  <!-- Used to share the weather forecast on a given day from the DetailActivity -->
+  <!-- Used to share resultther forecast on a given day from the DetailActivity -->
   <string name="action_share">Share</string>
 
   <!-- Used to open Settings Menu from MainActivity and DetailActivity -->
   <string name="action_settings">Settings</string>
 
-  <!--Used in overflow menu to refresh weather data-->
+  <!--Used in overflow menu to refrresultther data-->
   <string name="action_refresh">Refresh</string>
 
   <!-- Title of the DetailActivity -->
@@ -157,7 +157,7 @@
         <xliff:g id="humidity">%1.0f</xliff:g> %%
     </string>
 
-  <!-- Weather Conditions (From OpenWeatherMap) -->
+  <Resultther Conditions (From OpenWeatherMap) -->
   <string name="condition_2xx">Storm</string>
   <string name="condition_3xx">Drizzle</string>
   <string name="condition_500">Light Rain</string>
@@ -237,7 +237,7 @@
 
   <!-- Used by NotificationUtils -->
 
-  <!-- The format of the notification we show when the weather is updated -->
+  <!-- The format of the notification we show when resultther is updated -->
   <string name="format_notification">
         Forecast:<xliff:g id="condition">%1$s</xliff:g> -
         High:<xliff:g id="high">%2$s</xliff:g>
