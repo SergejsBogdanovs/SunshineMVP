@@ -3,11 +3,20 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <item
-    android:id="@+id/temp_unit_switch"
-    android:icon="@drawable/temperature_celsius"
-    android:title="@string/pref_units_label"
-    app:actionLayout="@layout/switch_item"/>
+
+  <item android:title="@string/pref_units_label">
+    <menu>
+      <item
+        android:id="@+id/item_celsius"
+        android:title="@string/pref_units_label_metric"
+        android:icon="@drawable/temperature_celsius"/>
+
+      <item
+        android:id="@+id/item_kelvin"
+        android:title="@string/pref_units_label_imperial"
+        android:icon="@drawable/temperature_kelvin"/>
+    </menu>
+  </item>
 
   <item
     android:id="@+id/settings"
