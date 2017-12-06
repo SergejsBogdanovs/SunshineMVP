@@ -15,6 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import lv.st.sbogdano.sunshinemvp.R;
 import lv.st.sbogdano.sunshinemvp.util.ActivityUtil;
+import lv.st.sbogdano.sunshinemvp.util.Injection;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -57,6 +58,11 @@ public class WeatherActivity extends AppCompatActivity {
           weatherFragment,
           R.id.contentFrame);
     }
+
+    // Create the presenter.
+    mWeatherPresenter = new WeatherPresenter(
+        Injection.provideWeatherRepository(getApplicationContext()),
+        weatherFragment);
   }
 
   @Override
