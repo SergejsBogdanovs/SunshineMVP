@@ -2,8 +2,7 @@ package lv.st.sbogdano.sunshinemvp.data.source;
 
 
 import android.support.annotation.NonNull;
-import java.util.List;
-import lv.st.sbogdano.sunshinemvp.data1.Result;
+import lv.st.sbogdano.sunshinemvp.data.Result;
 
 /**
  * Main entry point to access weather data.
@@ -15,7 +14,7 @@ public interface WeatherDataSource {
 
   interface LoadWeatherCallback {
 
-    void onWeatherLoaded(List<Result> result);
+    void onWeatherLoaded(Result result);
 
     void onDataNotAvailable();
   }

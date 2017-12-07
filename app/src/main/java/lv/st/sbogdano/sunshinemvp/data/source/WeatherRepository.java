@@ -3,8 +3,7 @@ package lv.st.sbogdano.sunshinemvp.data.source;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.support.annotation.NonNull;
-import java.util.List;
-import lv.st.sbogdano.sunshinemvp.data1.Result;
+import lv.st.sbogdano.sunshinemvp.data.Result;
 
 /**
  * Concrete implementation to load weather from data source into a cache.
@@ -24,7 +23,7 @@ public class WeatherRepository implements WeatherDataSource{
   /**
    * This variable has package local visibility so it can be accessed from tests.
    */
-  List<Result> mCachedResult;
+  Result mCachedResult;
 
   /**
    * Marks the cache is invalid, to force an update the next time data is requested.
@@ -42,7 +41,7 @@ public class WeatherRepository implements WeatherDataSource{
   public static WeatherRepository getInstance(WeatherDataSource weatherRemoteDataSource,
                                               WeatherDataSource weatherLocalDataSource) {
     if (INSTANCE == null) {
-      INSTANCE = new WeatherRepository( weatherRemoteDataSource, weatherLocalDataSource);
+      INSTANCE = new WeatherRepository(weatherRemoteDataSource, weatherLocalDataSource);
     }
     return INSTANCE;
   }

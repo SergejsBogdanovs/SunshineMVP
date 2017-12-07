@@ -19,7 +19,7 @@ public class Injection {
     checkNotNull(context);
 
     return WeatherRepository.getInstance(
-        WeatherRemoteDataSource.getInstance(),
+        WeatherRemoteDataSource.getInstance(context),
         WeatherLocalDataSource.getInstance(context));
   }
 }

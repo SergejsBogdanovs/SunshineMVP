@@ -9,6 +9,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "API_ENDPOINT", '"http://api.openweathermap.org/data/2.5/forecast/daily"'
+        buildConfigField "String", "API_KEY", '"42a42f8bfe81a615b1766a038a9674f"'
     }
     buildTypes {
         release {
@@ -20,7 +23,6 @@ android {
     configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

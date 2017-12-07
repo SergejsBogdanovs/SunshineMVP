@@ -38,7 +38,7 @@
     - In the History of Mankind", your launcher icon isn't displayed with "The greatest Wea"   -
     - or something similar.                                                                    -
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <string name="app_name">Sunshine</string>
+  <string name="app_name">SunshineMVP</string>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     - By convention, "action" denotes that this String will be used as the label for an        -
@@ -157,7 +157,7 @@
         <xliff:g id="humidity">%1.0f</xliff:g> %%
     </string>
 
-  <Resultther Conditions (From OpenWeatherMap) -->
+  <!-- Conditions (From OpenWeatherMap) -->
   <string name="condition_2xx">Storm</string>
   <string name="condition_3xx">Drizzle</string>
   <string name="condition_500">Light Rain</string>
