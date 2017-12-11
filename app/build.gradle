@@ -10,7 +10,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "API_ENDPOINT", '"http://api.openweathermap.org/data/2.5/forecast/daily"'
+        buildConfigField "String", "API_ENDPOINT", '"http://api.openweathermap.org/data/2.5/forecast/daily/"'
         buildConfigField "String", "API_KEY", '"42a42f8bfe81a615b1766a038a9674f"'
     }
     buildTypes {
@@ -43,10 +43,22 @@ dependencies {
     implementation "com.google.guava:guava:$rootProject.guavaVersion"
     implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+
     implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpVersion"
+
     implementation "com.squareup.picasso:picasso:$rootProject.picassoVersion"
     implementation "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterKnifeVersion"
+
+    // Architecture Components: Lifecycles
+    implementation "android.arch.lifecycle:extensions:$rootProject.acLifecyclesVersion"
+    implementation "android.arch.lifecycle:common-java8:$rootProject.acLifecyclesVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.acLifecyclesVersion"
+
+    // Architecture Components: Room
+    implementation "android.arch.persistence.room:runtime:$rootProject.acRoomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.acRoomVersion"
 
     // Dependencies for local unit tests
     testCompile "junit:junit:$rootProject.ext.junitVersion"

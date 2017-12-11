@@ -1,24 +1,16 @@
 package lv.st.sbogdano.sunshinemvp.data.source.remote;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
-import android.util.Log;
-import java.util.ArrayList;
-import java.util.List;
 import lv.st.sbogdano.sunshinemvp.BuildConfig;
 import lv.st.sbogdano.sunshinemvp.data.Result;
 import lv.st.sbogdano.sunshinemvp.data.api.OpenWeatherMapClient;
+import lv.st.sbogdano.sunshinemvp.data.api.ServiceGenerator;
 import lv.st.sbogdano.sunshinemvp.data.source.WeatherDataSource;
 import lv.st.sbogdano.sunshinemvp.util.SunshinePreferences;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.Retrofit.Builder;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Implements loading weather data from remote server.
@@ -54,13 +46,7 @@ public class WeatherRemoteDataSource implements WeatherDataSource{
   @Override
   public void getWeather(@NonNull LoadWeatherCallback callback) {
 
-    Retrofit.Builder builder = new Builder()
-        .baseUrl(BuildConfig.API_ENDPOINT)
-        .addConverterFactory(GsonConverterFactory.create());
-
-    Retrofit retrofit = builder.build();
-
-    OpenWeatherMapClient client = retrofit.create(OpenWeatherMapClient.class);
+    OpenWeatherMapClient client = ServiceGenerator.createService(OpenWeatherMapClient.class);
 
     Call<Result> call = client.getWeatherFromOWM(
         SunshinePreferences.getPreferredWeatherLocation(context),

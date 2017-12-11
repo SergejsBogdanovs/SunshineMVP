@@ -13,7 +13,6 @@ public interface OpenWeatherMapClient {
       @Query("mode") String mode,
       @Query("units") String units,
       @Query("cnt") String dayCount,
-      @Query("appid") String appId
-  );
+      @Query("appid") String appId);
 
 }

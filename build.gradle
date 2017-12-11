@@ -47,8 +47,10 @@ ext {
     constraintLayoutVersion  = '1.0.2'
     butterKnifeVersion = '8.8.1'
     retrofitVersion = '2.3.0'
-    okhttpVersion = '3.9.0'
+    okhttpVersion = '3.9.1'
     picassoVersion = '2.5.2'
+    acRoomVersion = '1.0.0'
+    acLifecyclesVersion = '1.0.0'
 }
 
 
