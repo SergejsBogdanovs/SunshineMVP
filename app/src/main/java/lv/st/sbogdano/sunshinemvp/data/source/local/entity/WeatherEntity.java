@@ -1,6 +1,6 @@
 package lv.st.sbogdano.sunshinemvp.data.source.local.entity;
 
-import static lv.st.sbogdano.sunshinemvp.data.source.local.entity.WeatherTable.TABLE_NAME;
+import static lv.st.sbogdano.sunshinemvp.data.source.local.entity.WeatherEntity.TABLE_NAME;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
@@ -9,12 +9,12 @@ import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
 /**
- * This is the table that will store a list of weather
+ * This is the table that will store data about weather
  */
 @Entity(
     tableName = TABLE_NAME,
     indices = {@Index(value = {"date"}, unique = true)})
-public class WeatherTable {
+public class WeatherEntity {
 
   public static final String TABLE_NAME = "weather";
 
@@ -40,7 +40,7 @@ public class WeatherTable {
 
   private float degrees;
 
-  public WeatherTable(int id, @NonNull int date, @NonNull int weatherId, @NonNull float minTemp,
+  public WeatherEntity(int id, @NonNull int date, @NonNull int weatherId, @NonNull float minTemp,
       @NonNull float maxTemp, @NonNull float humidity, @NonNull float pressure,
       @NonNull float windSpeed, @NonNull float degrees) {
     this.id = id;

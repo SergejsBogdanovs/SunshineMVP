@@ -3,6 +3,7 @@ package lv.st.sbogdano.sunshinemvp.weather;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import java.util.List;
+import lv.st.sbogdano.sunshinemvp.data.Result;
 import lv.st.sbogdano.sunshinemvp.weather.WeatherContract.Presenter;
 
 /**

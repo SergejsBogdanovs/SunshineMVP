@@ -59,10 +59,10 @@ public class WeatherActivity extends AppCompatActivity {
           R.id.contentFrame);
     }
 
-    // Create the presenter.
-    mWeatherPresenter = new WeatherPresenter(
-        Injection.provideWeatherRepository(getApplicationContext()),
-        weatherFragment);
+//    // Create the presenter.
+//    mWeatherPresenter = new WeatherPresenter(
+//        Injection.provideWeatherRepository(getApplicationContext()),
+//        weatherFragment);
   }
 
   @Override

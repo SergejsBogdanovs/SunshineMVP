@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import java.util.List;
 import lv.st.sbogdano.sunshinemvp.BasePresenter;
 import lv.st.sbogdano.sunshinemvp.BaseView;
+import lv.st.sbogdano.sunshinemvp.data.Result;
 
 /**
  * This specifies contract between View and Presenter.
